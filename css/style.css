@@ -1,0 +1,222 @@
+* {
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+    scroll-behavior: smooth;
+}
+:root{
+    --primary_color:rgb(229, 248, 246);
+    --secondary_color: rgb(152, 174, 179);
+    --accent_color:rgb(68, 90, 95);
+    --text_color_light:#fff;
+    --text_color_dark: rgb(29, 27, 27);
+}
+body{
+    font-family:'Roboto', sans-serif;
+    color: var(--text_color_dark);
+    line-height: 1.5;
+}
+h1,h2,h3{
+    text-transform: capitalize;
+}
+h1{
+    padding:1em; 
+}
+h2{
+    font-size: 1.5em;
+    margin-bottom: 0.5em;
+}
+p>a{
+    text-decoration: none;
+    color:var(--accent_color);
+    transition: 300ms ease;
+}
+p>a:hover{
+    color: rgb(133, 131, 131);
+
+}
+#navbar{
+    display: flex;
+    flex-wrap: wrap;
+    background-color:var(--secondary_color);
+    line-height: 1;
+    justify-content: center;
+}
+#navbar > a{
+    text-decoration: none;
+    text-transform: uppercase;
+    transition:all 300ms ease;
+    padding: 16px 8px;
+    margin: 4px;
+    background-color: var(--accent_color);
+    color:var(--text_color_light);
+    border: 1px solid var(--accent_color);
+}
+#nav_header{
+    text-transform: uppercase;
+}
+#navbar > a:hover{
+    background-color: var(--accent_color);
+    color:var(--text_color_light);
+
+}
+#main-doc{
+    background-color:var(--primary_color);
+    padding:2em;
+}
+.code_wrapper{
+    max-width:400px;
+    padding:1em;
+    background-color:var(--accent_color);
+    color: var(--text_color_light);
+    margin: 1em auto;
+    text-align:left;
+    border-radius: 5px;
+}
+.main-section{
+    margin: 1em 0;
+    padding:1em;
+}
+.main-section >ul{
+    list-style-type: circle;
+    padding-left: 1em;
+    margin: 1em 0;
+}
+.main-section >ul>li{
+    margin-top:0.5em; 
+}
+footer{
+    text-align: center;
+    background-color: var(--text_color_dark);
+    color: var(--text_color_light);
+    padding: 2em 0;
+}
+#close{
+    background-color: var(--accent_color);
+    color: var(--text_color_light);
+    text-decoration: none;
+    position: fixed;
+    top: 20px;
+    right: 16px;
+    font-size: 30px !important;
+    padding: 10px !important;
+    width:max-content !important;
+    text-align: right;
+    display: none;
+    cursor: pointer;
+
+}
+#mob_nav_overlay{
+    width: 0%;
+    height:70vh;
+    background-color: var(--accent_color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--text_color_light);
+    overflow-x: hidden;
+    position: fixed;
+    right: 0;
+    top:0;
+    transition: all 500ms ease;
+}
+#mobile_nav{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#mobile_nav>a{
+    color:var(--text_color_light);
+    font-variant:small-caps;
+    text-decoration: none;
+    font-size:1.1em;
+    border-bottom:1px solid var(--primary_color);
+    width:100%;
+    padding:7px 4px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 300ms ease;
+}
+#mobile_nav>a:hover{
+    background-color: var(--primary_color);
+    color: var(--text_color_dark);
+    transform: scale(1.08);
+}
+
+@media (min-width:900px){
+    #navbar{
+        position:fixed;
+        top:0;
+        left:0;
+        height:100vh;
+        width:25%;
+        overflow: scroll; 
+        flex-direction: column;
+    }
+    #navbar>a{
+        font-size: 1.1em;
+        font-weight:700;
+        padding: 1em 0.5em;
+        border-top:2px solid var(--accent_color);
+        margin: 0;
+        background-color:var(--secondary_color);
+        color:var(--text_color_dark);
+        cursor: pointer;
+
+   
+    }
+    #main-doc, footer{
+        margin-left: 25%;
+    }
+    #mob_nav_header{
+        display: none;
+    }
+}
+@media (max-width:900px){
+    #open{
+        width:40px;
+        height:5px;
+        border-radius: 10px;
+        background-color: var(--accent_color);
+        position: fixed;
+        right: 16px;
+        top:40px;
+        cursor: pointer;
+    }
+    #open::before{
+        content:"";
+        width:40px;
+        height:5px;
+        border-radius: 10px;
+        background-color: var(--accent_color);
+        position: fixed;
+        right: 16px;
+        top:30px;
+        cursor: pointer;
+
+    }
+    #open::after{
+        content:"";
+        width:40px;
+        height:5px;
+        border-radius: 10px;
+        background-color: var(--accent_color);
+        position: fixed;
+        right: 16px;
+        top:50px;
+        cursor: pointer;
+
+    }
+    #navbar{
+        display:none;
+    }
+    #mob_nav_header{
+        background: var(--secondary_color);
+        color: var(--text_color_dark);
+        font-variant: small-caps;
+    }
+    
+}

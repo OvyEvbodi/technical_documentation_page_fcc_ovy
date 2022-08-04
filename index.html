@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width initial-scale=1">
+        <title>CSS technical documentaon page</title>
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Source+Serif+4:wght@300&display=swap" rel="stylesheet">
+
+
+    </head>
+    <body>
+        <header>
+            <nav id="navbar">
+                <header>
+                    <h1 id="nav_header">CSS Documentation</h1>
+                </header>
+                <a class="nav-link" href="#introduction">introduction</a>
+                <a class="nav-link" href="#what_you_should_know_before_css">what you should know before css</a>
+                <a class="nav-link" href="#typograghy">typograghy</a>
+                <a class="nav-link" href="#colour">colour</a>
+                <a class="nav-link" href="#positions">positions</a>
+                <a class="nav-link" href="#resizing">resizing</a>
+                <a class="nav-link" href="#reference">reference</a>
+            </nav>
+            <header>
+                <h1 id="mob_nav_header">CSS Documentation</h1>
+            </header>
+            <div id="mob_nav_overlay">
+                <nav id="mobile_nav">
+                    <a class="mob-nav-link" href="#introduction">introduction</a>
+                    <a class="mob-nav-link" href="#what_you_should_know_before_css">what you should know before css</a>
+                    <a class="mob-nav-link" href="#typograghy">typograghy</a>
+                    <a class="mob-nav-link" href="#colour">colour</a>
+                    <a class="mob-nav-link" href="#positions">positions</a>
+                    <a class="mob-nav-link" href="#resizing">resizing</a>
+                    <a class="mob-nav-link" href="#reference">reference</a>
+                </nav>
+            </div>
+            
+            <div id="open"></div>
+            <div id="close">&times;</div>
+        </header>
+        <main id="main-doc">
+            <section class="main-section" id="introduction">
+                <header >
+                    <h2>introduction</h2>
+                </header>
+                <p>
+                    CSS is the language we use to style a Web page.
+                    CSS is used to define styles for your web pages, including the design, layout and variations in display for different devices and screen sizes.
+                </p>
+                <ul>
+                    <h3>what is CSS</h3>
+                    <li>CSS stands for Cascading Style Sheets</li>
+                    <li>CSS describes how HTML elements are to be displayed on screen, paper, or in other media</li>
+                    <li>CSS saves a lot of work. It can control the layout of multiple web pages all at once</li>
+                    <li>External stylesheets are stored in CSS files</li>
+                </ul>
+                <p>CSS selectors are used to "find" (or select) the HTML elements you want to style. The syntax for CSS is simple. The selector(e.g: body, h1, p,e.t.c...) is written first, then the style and value are passed in curly brackets as follows:</p>
+                <div class="code_wrapper">
+                    <code>*{<br>background-color:blue;<br>}</code>
+                </div>
+                <p></p>
+            </section>
+            <section class="main-section" id="what_you_should_know_before_css">
+                <header>
+                    <h2>what you should know before css</h2>
+                </header>
+                <p>CSS is responsible for the style of webpages. It is assumed you already have a fair understanding of the HTML5 markup language before delving into this documentation.
+                    </p>
+                <ul>
+                    <h3>a little about HTML</h3>
+                    <li>HTML stands for Hyper Text Markup Language</li>
+                    <li>HTML is the standard markup language for creating Web pages</li>
+                    <li>HTML describes the structure of a Web page</li>
+                    <li>HTML elements tell the browser how to display the content</li>
+                </ul>
+                <p>HTML tags are similar to what is shown in the code box below:</p>
+                <div class="code_wrapper">
+                    <code>&lt;p&gt;i am a paragrapgh&lt;/p&gt;</code>
+                </div>
+                <p>The code above tells the browser to create a paragragh. If you do not understand what I've been going on about, <a href="https://www.w3schools.com/html/html_intro.asp">learn HTML</a> from w3schols and be sure to return back to this page to continue with this CSS documentation. </p>
+            </section>
+            <section class="main-section" id="typograghy">
+                <header >
+                    <h2>typograghy</h2>
+                </header>
+                <p>Choosing the right font has a huge impact on how the readers experience a website.
+                    The right font can create a strong identity for your brand.
+                    Using a font that is easy to read is important. The font adds value to your text. It is also important to choose the correct color and text size for the font.
+                    </p>
+                <ul>
+                    <h3>In CSS there are five generic font families:</h3>
+                    <li>Serif fonts have a small stroke at the edges of each letter. They create a sense of formality and elegance.</li>
+                    <li>Sans-serif fonts have clean lines (no small strokes attached). They create a modern and minimalistic look.</li>
+                    <li>Monospace fonts - here all the letters have the same fixed width. They create a mechanical look.</li>
+                    <li>Cursive fonts imitate human handwriting.</li>
+                    <li>Fantasy fonts are decorative/playful fonts.</li>
+                </ul>
+                <div class="code_wrapper">
+                    <code>.p1 {<br>
+                        font-family: "Times New Roman", Times, serif;<br>}</code>
+                </div>
+                <p>If the font name is more than one word, it must be in quotation marks, like: "Times New Roman".<br>
+                    The font-family property should hold several font names as a "fallback" system, to ensure maximum compatibility between browsers/operating systems. Start with the font you want, and end with a generic family (to let the browser pick a similar font in the generic family, if no other fonts are available). The font names should be separated with comma.</p>
+            </section>
+            <section class="main-section" id="colour">
+                <header >
+                    <h2>colour</h2>
+                </header>
+                <p>The color property is used to set the color of the text. The color is specified by:
+                    </p>
+                <ul>
+                    <li>a color name - like "red"</li>
+                    <li>a HEX value - like "#ff0000"</li>
+                    <li>an RGB value - like "rgb(255,0,0)"
+                    </li>
+                </ul>
+                <p>The default text color for a page is defined in the body selector. In this example, we define both the background-color property and the color property:
+                </p>
+                <div class="code_wrapper">
+                    <code>header{<br> background-color:pink;<br> color: #ffffff;<br>}</code>
+                </div>
+                <p>The code above will style the header of the page to have a background colour of pink with white text.</p>
+            </section>
+            <section class="main-section" id="positions">
+                <header >
+                    <h2>positions</h2>
+                </header>
+                <p>The position property specifies the type of positioning method used for an element (static, relative, fixed, absolute or sticky).
+                    The position property specifies the type of positioning method used for an element.
+                    Elements are then positioned using the top, bottom, left, and right properties. However, these properties will not work unless the position property is set first. They also work differently depending on the position value.
+                    
+                    </p>
+                <ul>
+                    <h3>There are five different position values:</h3>
+                    <li>static</li>
+                    <li>absolute</li>
+                    <li>fixed</li>
+                    <li>relative</li>
+                    <li>sticky</li>
+                </ul>
+                <div class="code_wrapper">
+                    <code>.nav{<br>position:sticky;<br>}</code>
+                </div>
+                <p>An element with position: relative; is positioned relative to its normal position.
+                    <br>Setting the top, right, bottom, and left properties of a relatively-positioned element will cause it to be adjusted away from its normal position. Other content will not be adjusted to fit into any gap left by the element.
+                    <br>An element with position: fixed; is positioned relative to the viewport, which means it always stays in the same place even if the page is scrolled. The top, right, bottom, and left properties are used to position the element.
+                    <br>An element with position: absolute; is positioned relative to the nearest positioned ancestor (instead of positioned relative to the viewport, like fixed).
+                    <br>A sticky element toggles between relative and fixed, depending on the scroll position. It is positioned relative until a given offset position is met in the viewport - then it "sticks" in place (like position:fixed).
+                </p>
+            </section>
+            <section class="main-section" id="resizing">
+                <header >
+                    <h2>resizing</h2>
+                </header>
+                <p>The @media rule, introduced in CSS2, made it possible to define different style rules for different media types.<br>
+                    Examples: You could have one set of style rules for computer screens, one for printers, one for handheld devices, one for television-type devices, and so on.<br>
+                    Unfortunately these media types never got a lot of support by devices, other than the print media type.<br>
+                    Media queries in CSS3 extended the CSS2 media types idea: Instead of looking for a type of device, they look at the capability of the device.
+                    Media queries can be used to check many things.
+                    </p>
+                <ul>
+                    <h3>such as</h3>
+                    <li>width and height of the viewport</li>
+                    <li>width and height of the device</li>
+                    <li>orientation (is the tablet/phone in landscape or portrait mode?)</li>
+                    <li>resolution</li>
+                </ul>
+                <div class="code_wrapper">
+                    <code>@media screen and (min-width: 480px) {<br>
+                        body {<br>
+                          background-color: lightgreen;<br>
+                        }<br>
+                      }</code>
+                </div>
+                <p>One way to use media queries is to have an alternate CSS section right inside your style sheet.
+
+                    The above example changes the background-color to lightgreen if the viewport is 480 pixels wide or wider<br>Using media queries are a popular technique for delivering a tailored style sheet to desktops, laptops, tablets, and mobile phones (such as iPhone and Android phones).</p>
+            </section>
+         
+
+        </main>
+        <footer id="reference">
+            <p>The documentation on this page was gotten from <a href="https://www.w3schools.com/css/css_intro.asp">w3schools</a> and compiled by Ovy Evbodi.</p>
+        </footer>
+        <script rel="text/javascript" src="js/script.js"></script>
+    </body>
+
+</html>
